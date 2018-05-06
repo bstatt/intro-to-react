@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>sidebar component</title>
+  </head>
+  <body>
+    <div id="app"></div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/16.1.0/umd/react.development.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/16.1.0/umd/react-dom.development.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.34/browser.min.js"></script>
+    <script type="text/babel">
+      class Sidebar extends React.Component {
+        render() {
+          return(
+            <div>
+              <section>
+                <h1>Sidebar Title</h1>
+                <p>This is the sidebar text area</p>
+              </section>
+            </div>
+          );
+        }
+      }
+
+      ReactDOM.render(
+        <Sidebar />, document.getElementById('app')
+      );
+    </script>
+  </body>
+</html>
