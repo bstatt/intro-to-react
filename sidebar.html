@@ -11,12 +11,21 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.34/browser.min.js"></script>
     <script type="text/babel">
       class Sidebar extends React.Component {
+        constructor(props) {
+          super(props);
+          this.state = {
+            name: 'Your Name'
+          }
+        }
         render() {
           return(
             <div>
               <section>
-                <h1>Sidebar Title</h1>
-                <p>This is the sidebar text area</p>
+                <h1>{this.state.name}</h1>
+                <ul>
+                  <li>Job Title: {this.props.job}</li>
+                  <li>Age: {this.props.age}</li>
+                </ul>
               </section>
             </div>
           );
@@ -24,7 +33,7 @@
       }
 
       ReactDOM.render(
-        <Sidebar />, document.getElementById('app')
+        <Sidebar job="Web Developer" age="29"/>, document.getElementById('app')
       );
     </script>
   </body>
